@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController" customModule="TouchEventThorugh" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bY-rT-U6s">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="y7a-rH-OMe">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oig-9Y-1nF">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Vxk-IM-goj">
+                                            <rect key="frame" x="0.0" y="81.333333333333343" width="393" height="90.666666666666657"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viewが上に被さっていないButton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu4-sz-pqk">
+                                                    <rect key="frame" x="36" y="0.0" width="321" height="26.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGu-3u-DWX">
+                                                    <rect key="frame" x="143" y="56.333333333333314" width="107" height="34.333333333333343"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="TestButton"/>
+                                                    <connections>
+                                                        <action selector="onClickTestButton:" destination="-1" eventType="touchUpInside" id="Ssp-TN-aOe"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Vxk-IM-goj" secondAttribute="trailing" id="625-20-xaq"/>
+                                        <constraint firstItem="Vxk-IM-goj" firstAttribute="centerX" secondItem="oig-9Y-1nF" secondAttribute="centerX" id="OKb-Kj-UCE"/>
+                                        <constraint firstItem="Vxk-IM-goj" firstAttribute="leading" secondItem="oig-9Y-1nF" secondAttribute="leading" id="cHc-fP-Vrx"/>
+                                        <constraint firstItem="Vxk-IM-goj" firstAttribute="centerY" secondItem="oig-9Y-1nF" secondAttribute="centerY" id="y63-Sv-tnr"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jf2-CN-o2A">
+                                    <rect key="frame" x="0.0" y="253" width="393" height="253"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BqU-sL-Mge">
+                                            <rect key="frame" x="0.0" y="81.333333333333314" width="393" height="90.666666666666686"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viewが上に被っているButton" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gW-d1-xEK">
+                                                    <rect key="frame" x="56.666666666666657" y="0.0" width="280" height="26.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DM1-WN-6al">
+                                                    <rect key="frame" x="138.33333333333334" y="56.333333333333371" width="116.66666666666666" height="34.333333333333343"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Test2Button"/>
+                                                    <connections>
+                                                        <action selector="onClickTest2Button:" destination="-1" eventType="touchUpInside" id="5q9-34-HnP"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaJ-Pj-ptg">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="BqU-sL-Mge" secondAttribute="trailing" id="FsK-dp-hw0"/>
+                                        <constraint firstAttribute="trailing" secondItem="DaJ-Pj-ptg" secondAttribute="trailing" id="Fva-LW-oW5"/>
+                                        <constraint firstItem="BqU-sL-Mge" firstAttribute="leading" secondItem="Jf2-CN-o2A" secondAttribute="leading" id="Rux-v6-OLd"/>
+                                        <constraint firstItem="BqU-sL-Mge" firstAttribute="centerY" secondItem="Jf2-CN-o2A" secondAttribute="centerY" id="gTr-vi-9WI"/>
+                                        <constraint firstAttribute="bottom" secondItem="DaJ-Pj-ptg" secondAttribute="bottom" id="hOZ-YZ-Xle"/>
+                                        <constraint firstItem="DaJ-Pj-ptg" firstAttribute="leading" secondItem="Jf2-CN-o2A" secondAttribute="leading" id="l9Z-cc-mbF"/>
+                                        <constraint firstItem="DaJ-Pj-ptg" firstAttribute="top" secondItem="Jf2-CN-o2A" secondAttribute="top" id="u7C-Vg-4Fe"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ns5-Xs-aHR">
+                                    <rect key="frame" x="0.0" y="506" width="393" height="253"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="avj-73-Gdj">
+                                            <rect key="frame" x="0.0" y="68" width="393" height="117"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch Event Through Viewが上に被さっているButton" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3a-P4-mPR">
+                                                    <rect key="frame" x="6.6666666666666572" y="0.0" width="380" height="52.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSl-iv-SWl">
+                                                    <rect key="frame" x="138" y="82.666666666666629" width="117.33333333333331" height="34.333333333333343"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Test3Button"/>
+                                                    <connections>
+                                                        <action selector="onClickTest3Button:" destination="-1" eventType="touchUpInside" id="TxE-Ic-6Ap"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQD-cM-RPZ" customClass="TouchEventThroughView" customModule="TouchEventThroughSample" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.40203338420000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="jQD-cM-RPZ" secondAttribute="trailing" id="7Wb-gY-4Bw"/>
+                                        <constraint firstAttribute="bottom" secondItem="jQD-cM-RPZ" secondAttribute="bottom" id="AGx-9t-b8i"/>
+                                        <constraint firstItem="jQD-cM-RPZ" firstAttribute="top" secondItem="ns5-Xs-aHR" secondAttribute="top" id="QJC-46-hb5"/>
+                                        <constraint firstItem="avj-73-Gdj" firstAttribute="leading" secondItem="ns5-Xs-aHR" secondAttribute="leading" id="U1v-sm-wN8"/>
+                                        <constraint firstAttribute="trailing" secondItem="avj-73-Gdj" secondAttribute="trailing" id="bZR-5o-IvQ"/>
+                                        <constraint firstItem="jQD-cM-RPZ" firstAttribute="leading" secondItem="ns5-Xs-aHR" secondAttribute="leading" id="wgL-Uf-DYy"/>
+                                        <constraint firstItem="avj-73-Gdj" firstAttribute="centerY" secondItem="ns5-Xs-aHR" secondAttribute="centerY" id="yfE-ue-aGT"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="y7a-rH-OMe" secondAttribute="bottom" id="Bt8-7k-ccJ"/>
+                        <constraint firstItem="y7a-rH-OMe" firstAttribute="top" secondItem="9bY-rT-U6s" secondAttribute="top" id="RMR-CV-oXj"/>
+                        <constraint firstItem="y7a-rH-OMe" firstAttribute="leading" secondItem="9bY-rT-U6s" secondAttribute="leading" id="bRi-h7-rdS"/>
+                        <constraint firstAttribute="trailing" secondItem="y7a-rH-OMe" secondAttribute="trailing" id="l5W-Qo-Q9J"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9bY-rT-U6s" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="7PL-7X-Kl3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9bY-rT-U6s" secondAttribute="bottom" id="O7W-H9-hEW"/>
+                <constraint firstItem="9bY-rT-U6s" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="One-2w-Jzj"/>
+                <constraint firstItem="9bY-rT-U6s" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZQg-Tm-wYz"/>
+            </constraints>
+            <point key="canvasLocation" x="26.717557251908396" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
